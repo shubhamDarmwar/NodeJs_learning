@@ -6,6 +6,7 @@ const { time } = require('console')
 //ref: https://expressjs.com/en/5x/api.html
 const app = express()
 const port = process.env.PORT || 3000
+
 //Define paths for express config
 const publicDirectoryFolder = path.join(__dirname, "../public")
 const viewsPath = path.join(__dirname, "/templates/views")
@@ -117,3 +118,18 @@ app.get('*', (req, res) =>{
 app.listen(port, ()=> {
     console.log("Server started at port 3000")
 })
+/*
+Start server using npm run dev
+*/
+
+//https://immense-cliffs-23514.herokuapp.com/
+
+
+//Heroku 
+/*
+Heroku uses Start script from package.json to pick starting point  (npm run start)
+
+1. heroku create PROJECT_NAME
+    This command returns URL and respective Git repo url.
+    Add this Git url as a heroku remote.
+*/

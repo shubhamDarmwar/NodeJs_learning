@@ -10,7 +10,7 @@ console.log("Client side java script file is loaded")
 
 // Use our server to get data from.
 const getData = (productName, callBack) => {
-    fetch("http://localhost:3000/products?search==d").then((response) => {
+    fetch("/products?search==d").then((response) => {
         response.json().then((jsonResponse) => {
             callBack(jsonResponse.products)
         })
